@@ -14,10 +14,72 @@
     padding: 3.5em 1em 6em;
   }
 
+  .header-start {
+    padding: 3.5em 1em 3em;
+  }
+
   h1 {
     font-size: 2.5em;
   }
-  
+
+  .start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80vw;
+    max-width: 500px;
+    height: 70vw;
+    max-height: 450px;
+    border-radius: 20px;
+    border: transparent;
+    background-color: #FFFFFF;
+    filter: drop-shadow(0 0 0.25em darkgray);
+    overflow: hidden;
+  }
+
+  .start p {
+    text-align: center;
+    position: absolute;
+    margin: 0 1em;
+    padding: .75em;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, .5);
+  }
+
+  main {
+    text-align: center;
+  }
+
+  main button {
+    background-color: #0E4174;
+    padding: 1em 6em;
+    margin: 3em 0 1.5em;
+    color: #ffffff;
+    border-radius: 5px;
+    border: transparent;
+    cursor: -webkit-pointer;
+    cursor: -moz-pointer;
+    cursor: pointer;
+  }
+
+  main a {
+    display: block;
+    font-size: 0.75em;
+  }
+
+  .disclaimer {
+    position: absolute;
+    bottom: 3em;
+    width: 100%;
+    font-size: 0.75em;
+    color:#3b3b3b;
+  }
+
+  .start img {
+    width:100%;
+  }
+
   .tinder {
     width: 100vw;
     height: 80vh;
@@ -152,4 +214,24 @@
   
   .fa-remove {
     color: #fa5d5d;
+  }
+
+  @media screen and (min-width: 481px) {
+    .start {
+      height: fit-content;
+    }
+
+    .start p {
+      position: relative;
+      text-align: center;
+      flex: 1 0 45%;
+      margin: 0 1em;
+      padding: .75em;
+      border-radius: 20px;
+    }
+    
+    .start figure {
+      flex: 1 0 45%;
+
+    }
   }

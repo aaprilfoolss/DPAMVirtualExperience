@@ -7,42 +7,25 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
+    <header class="header-start">
       <h1>Find Your #DPAMArtMatch!</h1>
     </header>
-    <div class="tinder">
-      <div class="tinder--status">
-        <i class="fa fa-remove"></i>
-        <i class="fa fa-heart"></i>
-      </div>
-    
-      <div class="tinder--cards">
-        <div class="tinder--card">
-          <img src="images/img1.jpg" alt="img1" class="chameleon">
+    <main>
+        <div class="start">
+            <figure><img src="images/img4.jpg" alt="img4"></figure>
+            <p>
+                Art comes in all shapes and sizes, from realistic portraits to abstract sculptures. Which of these styles speaks to you the most?
+                <br><br>
+                <b>Get started now and explore a virtual 3D tour of your perfect art!</b>
+            </p>
         </div>
-        <div class="tinder--card">
-          <img src="images/img2.jpg" alt="img2" class="historian">
-        </div>
-        <div class="tinder--card">
-          <img src="images/img3.jpg" alt="img3" class="sensitive">
-        </div>
-        <div class="tinder--card">
-          <img src="images/img4.jpg" alt="img4" class="thrillSeeker">
-        </div>
-        <div class="tinder--card">
-          <img src="images/img5.jpg" alt="img5" class="traditionalist">
-        </div>
-      </div>
-    
-      <div class="tinder--buttons">
-        <button id="nope"><i class="fa fa-remove"></i></button>
-        <button id="love"><i class="fa fa-heart"></i></button>
-      </div>
-    </div>
 
-    <script src="https://kit.fontawesome.com/ac1bb5eb6c.js" crossorigin="anonymous"></script>
-    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-    <script src="script.js"></script>
+        <button type="button" onclick="location.href = 'quiz.html';">Take the Quiz</button>
+        <a href="default.html">Skip the quiz and go straight to 3D tour</a>
+
+        <p class="disclaimer">
+            <i>All of the art reflected is exclusively online.</i>
+        </p>
+    </main>
   </body>
 </html>
