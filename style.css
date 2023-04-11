@@ -9,9 +9,12 @@
   }
 
   header {
-    font-size: 1em;
     text-align: center;
     padding: 3.5em 1em 6em;
+  }
+
+  h1 {
+    font-size: 2.5em;
   }
   
   .tinder {
