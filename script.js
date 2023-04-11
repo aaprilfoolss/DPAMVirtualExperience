@@ -102,7 +102,7 @@ function result() {
 
 
   if (chameleon > 0) {
-    window.location.replace("chameleon.html");
+    window.location.href = "chameleon.html";
   }
 
 }
