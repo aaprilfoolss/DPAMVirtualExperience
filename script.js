@@ -19,7 +19,7 @@ function initCards(card, index) {
   tinderContainer.classList.add('loaded');
 }
 
-initCards();
+// initCards();
 
 allCards.forEach(function (el) {
   var hammertime = new Hammer(el);
@@ -160,3 +160,13 @@ nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
 
 window.onload = initCards();
+
+window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || 
+    ( typeof window.performance != "undefined" && 
+    window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
