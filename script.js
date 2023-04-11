@@ -19,7 +19,7 @@ function initCards(card, index) {
   tinderContainer.classList.add('loaded');
 }
 
-// initCards();
+initCards();
 
 allCards.forEach(function (el) {
   var hammertime = new Hammer(el);
