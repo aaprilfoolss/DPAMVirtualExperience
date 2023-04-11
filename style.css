@@ -40,6 +40,7 @@
 
   .start p {
     text-align: center;
+    width: 70vw;
     position: absolute;
     margin: 0 1em;
     padding: .75em;
