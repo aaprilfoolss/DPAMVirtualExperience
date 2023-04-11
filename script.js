@@ -98,6 +98,9 @@ allCards.forEach(function (el) {
 function result() {
   console.log(chameleon + ' ' + historian + ' ' + sensitive + ' ' + thrillSeeker + ' ' + traditionalist);
 
+  Math.max[chameleon, historian, sensitive, thrillSeeker, traditionalist];
+
+
   if (chameleon > 0) {
     window.location.replace("chameleon.html");
   }

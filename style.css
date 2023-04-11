@@ -60,7 +60,7 @@
   
   .tinder--cards {
     flex-grow: 1;
-    padding-top: 40px;
+    padding-top: 10em;
     text-align: center;
     display: flex;
     justify-content: center;
