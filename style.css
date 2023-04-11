@@ -5,14 +5,13 @@
   }
   
   body {
-    overflow: hidden;
     font-family: sans-serif;
   }
 
   header {
-    font-size: 1em;
+    font-size: 2.5em;
     text-align: center;
-    padding: 2em 1em 3.5em;
+    padding: 3.5em 1em;
   }
   
   .tinder {
@@ -61,23 +60,22 @@
   
   .tinder--cards {
     flex-grow: 1;
+    max-height: 80vw;
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 4em;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     z-index: 1;
   }
   
   .tinder--card {
     display: inline-block;
     width: 70vw;
-    max-width: 300px;
-    height: same-as-width + 5%;
-    max-height: 350px;
+    height: 75vw;
     background: #FFFFFF;
     padding-bottom: 40px;
-    border-radius: 8px;
+    border-radius: 20px;
     overflow: hidden;
     filter: drop-shadow(0 0 0.25em darkgray);
     position: absolute;
@@ -122,7 +120,7 @@
   .tinder--buttons button {
     border-radius: 50%;
     line-height: 60px;
-    width: 60px;
+    width: 20vw;
     border: 0;
     background: #FFFFFF;
     display: inline-block;
@@ -137,7 +135,7 @@
   }
   
   .tinder--buttons i {
-    font-size: 32px;
+    font-size: 5em;
     vertical-align: middle;
   }
   
@@ -150,9 +148,34 @@
   }
   
 
-  @media screen and (max-width: 380px) {
+  @media screen and (min-width: 450px) {
     header {
+      font-size: 1em;
       text-align: center;
-      padding: 2em 1em 1em;
+      padding: 3.5em 1em 6em;
     }
+
+    .tinder--cards {
+      padding-bottom: 0;
+      max-height: 320px;
+    }
+
+    .tinder--card {
+      width: 70vw;
+      max-width: 250px;
+      height: 75vw;
+      max-height: 300px;
+      background: #FFFFFF;
+      padding-bottom: 40px;
+    }
+
+    .tinder--buttons button {
+      width: 20vw;
+      max-width: 75px;
+    }
+
+    .tinder--buttons i {
+      font-size: 2.5em;
+    }
+
   }
