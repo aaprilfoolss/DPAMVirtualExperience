@@ -6,7 +6,7 @@
   
   body {
     font-family: sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   header {
@@ -48,6 +48,10 @@
     background-color: rgba(255, 255, 255, .5);
   }
 
+  .start img {
+    width:100%;
+  }
+
   main {
     text-align: center;
   }
@@ -75,10 +79,6 @@
     width: 100%;
     font-size: 0.75em;
     color:#3b3b3b;
-  }
-
-  .start img {
-    width:100%;
   }
 
   .tinder {
