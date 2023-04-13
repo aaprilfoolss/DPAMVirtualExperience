@@ -1,7 +1,9 @@
 class Card {
   constructor({
+    onDismiss,
     card
   }) {
+    this.onDismiss = onDismiss;
     this.card = card;
     this.#init();
   }
@@ -131,6 +133,7 @@ class Card {
   #handleTouchEnd = () => {
     this.#startPoint = null;
     document.removeEventListener('touchmove', this.#handleTouchMove);
+    this.element.style.transition = 'transform 1s';
     this.element.style.transform = '';
   }
   
@@ -146,6 +149,9 @@ class Card {
     setTimeout(() => {
       this.element.remove();
     }, 1000);
+    if (typeof this.onDismiss === 'function') {
+      this.onDismiss();
+    }
     if (typeof this.onLike === 'function' && direction === 1) {
       this.onLike();
     }

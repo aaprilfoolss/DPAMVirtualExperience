@@ -1,3 +1,4 @@
+var cardList = document.getElementById('card-list');
 var like = document.querySelector('#like');
 var dislike = document.querySelector('#dislike');
 
@@ -10,13 +11,20 @@ function init() {
 
     for (let i = 0; i < cards.length; i++) {
         new Card ({
-            card: cards.item(i)
+            card: cards.item(i),
+            onDismiss: shiftIndex
         });
         
     }
 
 }
 
+function shiftIndex() {
+    const cards = cardList.querySelectorAll('.card:not(.dismissing)');
+    cards.forEach((card, index) => {
+      card.style.setProperty('--i', index);
+    });
+}
 
 //update later
 function result() {
