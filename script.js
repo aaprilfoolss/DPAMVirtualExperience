@@ -50,7 +50,7 @@ allCards.forEach(function (el) {
     var moveOutWidth = document.body.clientWidth;
     var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
 
-    event.target.classList.toggle('removed', !keep);
+    // event.target.classList.toggle('removed', !keep);
 
     if (keep) {
       event.target.style.transform = '';
@@ -64,6 +64,7 @@ allCards.forEach(function (el) {
       var rotate = xMulti * yMulti;
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
+      event.target.remove();
 
       if (event.deltaX > 0) {
         switch(event.target.getElementsByTagName('img')[0].classList[0]){
