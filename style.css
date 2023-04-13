@@ -110,7 +110,7 @@
     width: 50vw;
     aspect-ratio: 3 / 4;
     z-index: 0;
-    overflow: visible;
+    padding: 0.25em;
   }
   
   .tinder--card {
