@@ -48,7 +48,7 @@ allCards.forEach(function (el) {
     var moveOutWidth = document.body.clientWidth;
     var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
 
-    // event.target.classList.toggle('removed', !keep);
+    event.target.classList.toggle('removed', !keep);
 
     if (keep) {
       event.target.style.transform = '';
@@ -62,9 +62,6 @@ allCards.forEach(function (el) {
       var rotate = xMulti * yMulti;
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
-      setTimeout(() => {
-        event.target.remove();
-      }, 1000);
 
       if (event.deltaX > 0) {
         switch(event.target.getElementsByTagName('img')[0].classList[0]){
@@ -90,6 +87,9 @@ allCards.forEach(function (el) {
 
       var cards = document.querySelectorAll('.tinder--card:not(.removed)');
       if (!cards.length) result();
+      setTimeout(() => {
+        event.target.remove();
+      }, 500);
 
       initCards();
     }
@@ -99,7 +99,7 @@ allCards.forEach(function (el) {
 function result() {
   console.log(chameleon + ' ' + historian + ' ' + sensitive + ' ' + thrillSeeker + ' ' + traditionalist);
 
-  Math.max[chameleon, historian, sensitive, thrillSeeker, traditionalist];
+  // Math.max[chameleon, historian, sensitive, thrillSeeker, traditionalist];
 
 
   if (chameleon > 0) {
@@ -147,6 +147,10 @@ function createButtonListener(love) {
     card.classList.add('removed');
     var cards = document.querySelectorAll('.tinder--card:not(.removed)');
     if (!cards.length) result();
+
+    setTimeout(() => {
+      card.target.remove();
+    }, 500);
 
     initCards();
 

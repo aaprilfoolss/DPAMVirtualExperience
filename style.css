@@ -199,7 +199,6 @@
       max-width: 400px;
       width: 50%;
       aspect-ratio: 4 / 3;
-      z-index: 1;
     }
 
     .start {
