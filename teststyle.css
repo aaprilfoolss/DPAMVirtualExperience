@@ -5,12 +5,20 @@
 }
 
 header {
-    margin-bottom: 2em;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+h1 {
+  font-size: 2.5em;
 }
 
 main {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    padding-top: 5em;
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
@@ -18,7 +26,7 @@ main {
 }
 
 #card-list {
-    height: 70vh;
+    width: 50vw;
     aspect-ratio: 2 / 3;
     perspective: 1000px;
     perspective-origin: center 50%;
@@ -30,7 +38,7 @@ main {
     width: 100%;
     height: 100%;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 1em;
     transform: translateZ(calc(-30px * var(--i)))
     translateY(calc(-20px * var(--i)));
     overflow: hidden;
@@ -46,7 +54,7 @@ main {
 
 #like,
 #dislike {
-  font-size: 10vh;
+  font-size: 8vh;
   border-radius: 50%;
   padding: 20px;
   position: relative;
@@ -73,25 +81,40 @@ main {
 }
 
 @keyframes animation1 {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+}
+  
+@keyframes animation2 {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+}
 
-    0%,
-    100% {
-      opacity: 0.5;
-    }
-  
-    50% {
-      opacity: 1;
-    }
+@media screen and (min-width: 481px) {
+  main {
+    padding-top: 0;
   }
-  
-  @keyframes animation2 {
-  
-    0%,
-    100% {
-      opacity: 0.5;
-    }
-  
-    50% {
-      opacity: 1;
-    }
+
+  #card-list {
+    max-width: 400px;
+    width: 50%;
+    aspect-ratio: 4 / 3;
   }
+
+  #like,
+  #dislike {
+    font-size: 10vh;
+  } 
+}
