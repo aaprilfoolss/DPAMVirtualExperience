@@ -110,7 +110,6 @@
     width: 50vw;
     aspect-ratio: 3 / 4;
     z-index: 0;
-    padding: 0.25em;
   }
   
   .tinder--card {
@@ -119,6 +118,7 @@
     background: #FFFFFF;
     border-radius: 20px;
     overflow: hidden;
+    padding: 0.25em;
     filter: drop-shadow(0 0 0.25em darkgray);
     position: absolute;
     transition: transform 1s;
