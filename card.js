@@ -121,6 +121,7 @@ class Card {
 
   // touch event handlers
   #handleTouchMove = (e) => {
+    e.preventDefault();
     if (!this.#startPoint) return;
     const touch = e.changedTouches[0];
     if (!touch) return;
