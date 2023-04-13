@@ -3,6 +3,8 @@ var dislike = document.querySelector('#dislike');
 
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
 
+
+//add listeners for icon buttons & set those up
 function init() {
     var cards = document.getElementsByClassName('card');
 
@@ -15,15 +17,14 @@ function init() {
 
 }
 
+
+//update later
 function result() {
     console.log(chameleon + ' ' + historian + ' ' + sensitive + ' ' + thrillSeeker + ' ' + traditionalist);
-  
-    // Math.max[chameleon, historian, sensitive, thrillSeeker, traditionalist];
-  
-  
-    // if (chameleon > 0) {
-    //   window.location.href = "chameleon.html";
-    // }
+
+    if (chameleon > 0) {
+      window.location.href = "chameleon.html";
+    }
   
 }
 
