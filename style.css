@@ -11,7 +11,7 @@
 
   header {
     text-align: center;
-    padding: 3.5em 1em 6em;
+    padding: 3.5em 1em;
   }
 
   .header-start {
@@ -82,10 +82,10 @@
   }
 
   .tinder {
-    width: 100vw;
-    height: 80vh;
+    margin: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
@@ -93,26 +93,6 @@
   
   .loaded.tinder {
     opacity: 1;
-  }
-  
-  .tinder--status {
-    position: absolute;
-    top: 50%;
-    margin-top: -30px;
-    z-index: 2;
-    width: 100%;
-    text-align: center;
-    pointer-events: none;
-  }
-  
-  .tinder--status i {
-    font-size: 100px;
-    opacity: 0;
-    transform: scale(0.3);
-    transition: all 0.2s ease-in-out;
-    position: absolute;
-    width: 100px;
-    margin-left: -50px;
   }
   
   .tinder_love .fa-heart {
@@ -126,30 +106,21 @@
   }
   
   .tinder--cards {
-    flex-grow: 1;
-    text-align: center;
-    padding-bottom: 0;
-    max-height: 360px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    position: relative;
+    width: 50vw;
+    aspect-ratio: 3 / 4;
     z-index: 1;
   }
   
   .tinder--card {
-    display: inline-block;
-    width: 70vw;
-    max-width: 300px;
-    max-height: 350px;
-    height: 75vw;
+    width: 100%;
+    height: 100%;
     background: #FFFFFF;
-    padding-bottom: 40px;
     border-radius: 20px;
     overflow: hidden;
     filter: drop-shadow(0 0 0.25em darkgray);
     position: absolute;
-    will-change: transform;
-    transition: all 0.3s ease-in-out;
+    transition: transform 1s;
     cursor: -webkit-grab;
     cursor: -moz-grab;
     cursor: grab;
@@ -163,7 +134,10 @@
   }
   
   .tinder--card img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
     pointer-events: none;
   }
   
@@ -181,12 +155,7 @@
     pointer-events: none;
   }
   
-  .tinder--buttons {
-    flex: 0 0 100px;
-    text-align: center;
-  }
-  
-  .tinder--buttons button {
+  .tinder button {
     border-radius: 50%;
     line-height: 60px;
     width: 20vw;
@@ -200,11 +169,11 @@
     cursor: pointer;
   }
   
-  .tinder--buttons button:focus {
+  .tinder button button:focus {
     outline: 0;
   }
   
-  .tinder--buttons i {
+  .tinder button i {
     font-size: 2.5em;
     vertical-align: middle;
   }
@@ -218,6 +187,14 @@
   }
 
   @media screen and (min-width: 481px) {
+
+    .tinder--cards {
+      max-width: 400px;
+      width: 50%;
+      aspect-ratio: 4 / 3;
+      z-index: 1;
+    }
+
     .start {
       height: fit-content;
     }
