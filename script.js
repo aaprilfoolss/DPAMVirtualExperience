@@ -62,7 +62,7 @@ allCards.forEach(function (el) {
       var rotate = xMulti * yMulti;
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
-      Element.target.remove();
+      event.target.remove();
 
       if (event.deltaX > 0) {
         switch(event.target.getElementsByTagName('img')[0].classList[0]){
