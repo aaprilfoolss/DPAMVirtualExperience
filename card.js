@@ -69,7 +69,7 @@ class Card {
       if (!touch) return;
       const { clientX, clientY } = touch;
       this.#startPoint = { x: clientX, y: clientY }
-      document.addEventListener('touchmove', this.#handleTouchMove);
+      document.addEventListener('touchmove', this.#handleTouchMove, {passive:false});
       this.element.style.transition = 'transform 0s';
     });
   
