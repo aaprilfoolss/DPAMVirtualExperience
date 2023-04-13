@@ -88,9 +88,9 @@ class Card {
     document.addEventListener('mouseup', this.#handleMoveUp);
   
     // prevent card from being dragged
-    this.element.addEventListener('dragstart', (e) => {
-      e.preventDefault();
-    });
+    // this.element.addEventListener('dragstart', (e) => {
+    //   e.preventDefault();
+    // });
   }
   
   #handleMove = (x, y) => {
