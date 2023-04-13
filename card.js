@@ -1,9 +1,7 @@
 class Card {
   constructor({
-    onDismiss,
     card
   }) {
-    this.onDismiss = onDismiss;
     this.card = card;
     this.#init();
   }
@@ -149,9 +147,6 @@ class Card {
     setTimeout(() => {
       this.element.remove();
     }, 1000);
-    if (typeof this.onDismiss === 'function') {
-      this.onDismiss();
-    }
     if (typeof this.onLike === 'function' && direction === 1) {
       this.onLike();
     }
