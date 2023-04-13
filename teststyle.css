@@ -31,6 +31,7 @@ main {
     perspective-origin: center 50%;
     transform-style: preserve-3d;
     position: relative;
+    overflow: visible;
 }
 
 .card {
