@@ -84,6 +84,7 @@
   .tinder {
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -106,11 +107,13 @@
   }
   
   .tinder--cards {
+    order: 1;
     position: relative;
     width: 50vw;
     aspect-ratio: 3 / 4;
     z-index: 0;
-    margin: 0.3em;
+    margin: 0.3em 15vw;
+    /* margin: 0.3em; */
   }
   
   .tinder--card {
@@ -157,6 +160,7 @@
   }
   
   .tinder button {
+    order: 2;
     border-radius: 50%;
     line-height: 60px;
     width: 20vw;
@@ -190,6 +194,7 @@
   @media screen and (min-width: 481px) {
     .tinder button {
       margin: 0 20px;
+      order: 0;
     }
 
     .tinder button i {
@@ -197,9 +202,11 @@
     }
 
     .tinder--cards {
+      order: 0;
       max-width: 400px;
       width: 50%;
       aspect-ratio: 4 / 3;
+      margin: 0.3em;
     }
 
     .start {
