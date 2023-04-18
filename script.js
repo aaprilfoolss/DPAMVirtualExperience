@@ -147,7 +147,8 @@ function createButtonListener(love) {
     if (!cards.length) result();
 
     setTimeout(() => {
-      card.target.remove();
+      console.log(card);
+      card.remove();
     }, 500);
 
     // initCards();
