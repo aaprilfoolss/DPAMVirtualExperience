@@ -72,6 +72,7 @@
 
   .disclaimer {
     position: absolute;
+    margin-top: 1em;
     bottom: 3em;
     width: 100%;
     font-size: 0.75em;
@@ -107,9 +108,10 @@
     order: 1;
     position: relative;
     width: 50vw;
+    max-height: 60vw;
     aspect-ratio: 3 / 4;
     z-index: 0;
-    margin: 0 15vw 2em;
+    margin: 0 16vw 2em;
     overflow: visible;
     /* margin: 0.3em; */
   }
@@ -168,7 +170,7 @@
     border: 0;
     z-index: 1;
     background: transparent;
-    margin: 0 8px;
+    margin: 0 5vw;
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
     cursor: pointer;
