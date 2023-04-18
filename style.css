@@ -123,10 +123,9 @@
     background: #FFFFFF;
     border-radius: 20px;
     overflow: hidden;
-    /* filter: drop-shadow(0 0 0.25em darkgray); */
-    box-shadow: 0 0 5px 0 #888888;
-    -webkit-box-shadow: 0 0 5px 0 #888888;
-    -moz-box-shadow: 0 0 5px 0 #888888;
+    box-shadow: 0 0 5px 0 #555;
+    -webkit-box-shadow: 0 0 5px 0 #555;
+    -moz-box-shadow: 0 0 5px 0 #555;
     position: absolute;
     transition: transform 1s;
     cursor: -webkit-grab;
