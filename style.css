@@ -112,7 +112,7 @@
     width: 50vw;
     aspect-ratio: 3 / 4;
     z-index: 0;
-    margin: 2em 15vw;
+    margin: 0 15vw 2em;
     overflow: visible;
     /* margin: 0.3em; */
   }
