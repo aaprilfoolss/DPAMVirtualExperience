@@ -110,7 +110,7 @@
     width: 50vw;
     max-height: 60vw;
     aspect-ratio: 3 / 4;
-    z-index: 0;
+    z-index: 1;
     margin: 0 16vw 2em;
     overflow: visible;
     /* margin: 0.3em; */

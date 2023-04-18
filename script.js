@@ -7,7 +7,7 @@ var love = document.getElementById('love');
 
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
 
-function initCards(card, index) {
+function initCards() {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
 
   newCards.forEach(function (card, index) {
@@ -16,8 +16,6 @@ function initCards(card, index) {
   
   tinderContainer.classList.add('loaded');
 }
-
-// initCards();
 
 allCards.forEach(function (el) {
   var hammertime = new Hammer(el);
@@ -91,7 +89,7 @@ allCards.forEach(function (el) {
         event.target.remove();
       }, 500);
 
-      initCards();
+      // initCards();
     }
   });
 });
@@ -152,7 +150,7 @@ function createButtonListener(love) {
       card.target.remove();
     }, 500);
 
-    initCards();
+    // initCards();
 
     event.preventDefault();
   };
