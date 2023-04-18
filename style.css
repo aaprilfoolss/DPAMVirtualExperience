@@ -179,7 +179,7 @@
   }
   
   .tinder button i {
-    font-size: 3em;
+    font-size: 4em;
     vertical-align: middle;
   }
   
@@ -202,7 +202,7 @@
       max-width: 400px;
       width: 50%;
       aspect-ratio: 4 / 3;
-      margin: 0.3em;
+      margin: 0.3em 2em;
     }
 
     .start {
