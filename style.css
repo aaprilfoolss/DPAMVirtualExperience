@@ -179,7 +179,7 @@
   }
   
   .tinder button i {
-    font-size: 2.5em;
+    font-size: 3em;
     vertical-align: middle;
   }
   
@@ -195,10 +195,6 @@
     .tinder button {
       margin: 0 20px;
       order: 0;
-    }
-
-    .tinder button i {
-      font-size: 3em;
     }
 
     .tinder--cards {
