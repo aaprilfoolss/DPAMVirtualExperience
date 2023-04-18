@@ -123,9 +123,9 @@
     background: #FFFFFF;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 5px 0 #ccc;
-    -webkit-box-shadow: 0 0 5px 0 #ccc;
-    -moz-box-shadow: 0 0 5px 0 #ccc;
+    box-shadow: 0 0 5px 0 #ddd;
+    -webkit-box-shadow: 0 0 5px 0 #ddd;
+    -moz-box-shadow: 0 0 5px 0 #ddd;
     position: absolute;
     transition: transform 1s;
     cursor: -webkit-grab;
