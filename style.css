@@ -150,8 +150,8 @@
   .quiz--cards {
     order: 1;
     position: relative;
-    height: 60vh;
-    max-height: 60vh;
+    max-height: 60vw;
+    width: 50vw;
     aspect-ratio: 3 / 4;
     z-index: 1;
     margin: 0 16vw 1em;
