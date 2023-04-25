@@ -1,7 +1,7 @@
 'use strict';
 
-var tinderContainer = document.querySelector('.tinder');
-var allCards = document.querySelectorAll('.tinder--card');
+var tinderContainer = document.querySelector('.quiz');
+var allCards = document.querySelectorAll('.quiz--card');
 var nope = document.getElementById('nope');
 var love = document.getElementById('love');
 var cardIndex = 1;
@@ -9,7 +9,7 @@ var cardIndex = 1;
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
 
 function initCards() {
-  var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
+  var newCards = document.querySelectorAll('.quiz--card:not(.removed)');
 
   newCards.forEach(function (card, index) {
     card.style.zIndex = allCards.length - index;
@@ -84,7 +84,7 @@ allCards.forEach(function (el) {
         }
       }
 
-      var cards = document.querySelectorAll('.tinder--card:not(.removed)');
+      var cards = document.querySelectorAll('.quiz--card:not(.removed)');
       if (!cards.length) result();
       setTimeout(() => {
         event.target.remove();
@@ -110,7 +110,7 @@ function result() {
 
 function createButtonListener(love) {
   return function (event) {
-    var cards = document.querySelectorAll('.tinder--card:not(.removed)');
+    var cards = document.querySelectorAll('.quiz--card:not(.removed)');
     var moveOutWidth = document.body.clientWidth * 1.5;
 
     if (!cards.length) return false;
@@ -143,7 +143,7 @@ function createButtonListener(love) {
     }
 
     card.classList.add('removed');
-    var cards = document.querySelectorAll('.tinder--card:not(.removed)');
+    var cards = document.querySelectorAll('.quiz--card:not(.removed)');
     if (!cards.length) result();
 
     setTimeout(() => {

@@ -76,7 +76,7 @@
     margin-top: 1em;
   }
 
-  .tinder {
+  .quiz {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +87,7 @@
     transition: opacity 0.1s ease-in-out;
   }
   
-  .loaded.tinder {
+  .loaded.quiz {
     opacity: 1;
   }
   
@@ -101,7 +101,7 @@
     transform: scale(1);
   }
   
-  .tinder--cards {
+  .quiz--cards {
     order: 1;
     position: relative;
     width: 50vw;
@@ -113,7 +113,7 @@
     /* margin: 0.3em; */
   }
   
-  .tinder--card {
+  .quiz--card {
     width: 100%;
     height: 100%;
     background: #FFFFFF;
@@ -129,7 +129,7 @@
     cursor: grab;
   }
   
-  .moving.tinder--card {
+  .moving.quiz--card {
     transition: none;
     cursor: -webkit-grabbing;
     cursor: -moz-grabbing;
@@ -155,7 +155,7 @@
     overflow: hidden;
   }
   
-  .tinder--card img {
+  .quiz--card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -163,7 +163,7 @@
     pointer-events: none;
   }
   
-  .tinder button {
+  .quiz button {
     order: 2;
     border-radius: 50%;
     line-height: 60px;
@@ -178,11 +178,11 @@
     cursor: pointer;
   }
   
-  .tinder button button:focus {
+  .quiz button button:focus {
     outline: 0;
   }
   
-  .tinder button i {
+  .quiz button i {
     font-size: 3em;
     vertical-align: middle;
   }
@@ -204,6 +204,14 @@
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
     cursor: pointer;
+  }
+
+  #skip a {
+    text-decoration: none;
+  }
+
+  #skip a:visited {
+    color: #0E4174;
   }
 
   .disclaimer {
@@ -238,12 +246,12 @@
       font-size: 2.5em;
     }
 
-    .tinder button {
+    .quiz button {
       margin: 0 20px;
       order: 0;
     }
 
-    .tinder--cards {
+    .quiz--cards {
       order: 0;
       max-width: 300px;
       width: 50%;
