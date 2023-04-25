@@ -107,9 +107,8 @@
     border: solid 0.15em #0E4174;
   }
 
-  #overlay button a {
+  a {
     text-decoration: none;
-    color: #fff;
   }
 
   #overlay #continue {
@@ -251,16 +250,6 @@
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
     cursor: pointer;
-  }
-
-  #skip a {
-    text-decoration: none;
-    color: #0E4174;
-
-  }
-
-  #skip a:visited {
-    color: #0E4174;
   }
 
   .disclaimer {

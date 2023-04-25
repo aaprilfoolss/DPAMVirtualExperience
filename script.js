@@ -4,6 +4,8 @@ var tinderContainer = document.querySelector('.quiz');
 var allCards = document.querySelectorAll('.quiz--card');
 var nope = document.getElementById('nope');
 var love = document.getElementById('love');
+var skip = document.getElementById('skip');
+var cont = document.getElementById('continue');
 var cardIndex = 1;
 
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
@@ -92,6 +94,9 @@ allCards.forEach(function (el) {
 
       cardIndex++;
       document.getElementById('progress').innerHTML = cardIndex + " of 10";
+      if (cardIndex == 6) {
+        document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
+      }
     }
   });
 });
@@ -151,10 +156,21 @@ function createButtonListener(love) {
     }, 500);
 
     cardIndex++;
-      document.getElementById('progress').innerHTML = cardIndex + " of 10";
+    document.getElementById('progress').innerHTML = cardIndex + " of 10";
+    if (cardIndex == 6) {
+      document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
+    }
 
     event.preventDefault();
   };
+}
+
+function skipListener() {
+  document.getElementById('overlay').style.visibility = "visible";
+}
+
+function contListener()  {
+  document.getElementById('overlay').style.visibility = 'hidden';
 }
 
 var nopeListener = createButtonListener(false);
@@ -162,6 +178,8 @@ var loveListener = createButtonListener(true);
 
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+skip.addEventListener('click', skipListener);
+cont.addEventListener('click', contListener);
 
 window.onload = initCards();
 
