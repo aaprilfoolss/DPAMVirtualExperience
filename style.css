@@ -20,7 +20,7 @@
   }
 
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .start {
@@ -68,15 +68,6 @@
   main a {
     display: block;
     font-size: 0.75em;
-  }
-
-  .disclaimer {
-    position: absolute;
-    margin-top: 1em;
-    bottom: 3em;
-    width: 100%;
-    font-size: 0.75em;
-    color:#3b3b3b;
   }
 
   .tinder {
@@ -184,6 +175,34 @@
     font-size: 4em;
     vertical-align: middle;
   }
+
+  #footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #skip {
+    flex: 0 0 70%;
+    background-color: #fff;
+    padding: 1em;
+    margin: 2em 0 1em;
+    color: #0E4174;
+    border-radius: 5px;
+    border: solid 0.125em #0E4174;
+    cursor: -webkit-pointer;
+    cursor: -moz-pointer;
+    cursor: pointer;
+  }
+
+  .disclaimer {
+    flex: 1 0 80%;
+    margin-top: 0.5em;
+    bottom: 3em;
+    width: 100%;
+    font-size: 0.75em;
+    color:#3b3b3b;
+  }
   
   .fa-heart {
     color: #7dff7b;
@@ -194,6 +213,26 @@
   }
 
   @media screen and (min-width: 481px) {
+    #footer {
+      margin: 4em 3em 0;
+      justify-content: space-between;
+    }
+
+    #skip {
+      flex: 0 0 fit-content;
+      padding: 0;
+      text-decoration: underline;
+      border: transparent;
+    }
+
+    .disclaimer {
+      flex: 0 0 fit-content;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
     .tinder button {
       margin: 0 20px;
       order: 0;
