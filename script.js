@@ -4,6 +4,7 @@ var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
 var nope = document.getElementById('nope');
 var love = document.getElementById('love');
+var cardIndex = 1;
 
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
 
@@ -15,6 +16,8 @@ function initCards() {
   });
   
   tinderContainer.classList.add('loaded');
+
+  document.getElementById('progress').innerHTML = cardIndex + " of 10";
 }
 
 allCards.forEach(function (el) {
@@ -89,7 +92,8 @@ allCards.forEach(function (el) {
         event.target.remove();
       }, 500);
 
-      // initCards();
+      cardIndex++;
+      document.getElementById('progress').innerHTML = cardIndex + " of 10";
     }
   });
 });
@@ -114,8 +118,6 @@ function createButtonListener(love) {
     if (!cards.length) return false;
 
     var card = cards[0];
-
-    // card.classList.add('removed');
 
     if (love) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
@@ -150,7 +152,8 @@ function createButtonListener(love) {
       card.remove();
     }, 500);
 
-    // initCards();
+    cardIndex++;
+      document.getElementById('progress').innerHTML = cardIndex + " of 10";
 
     event.preventDefault();
   };

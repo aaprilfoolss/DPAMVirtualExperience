@@ -12,7 +12,7 @@
 
   header {
     text-align: center;
-    padding: 3em 1em;
+    padding: 2em 1em;
   }
 
   .header-start {
@@ -68,6 +68,12 @@
   main a {
     display: block;
     font-size: 0.75em;
+  }
+
+  #progress {
+    color:#3b3b3b;
+    display: block;
+    margin-top: 1em;
   }
 
   .tinder {
@@ -172,7 +178,7 @@
   }
   
   .tinder button i {
-    font-size: 4em;
+    font-size: 3em;
     vertical-align: middle;
   }
 
@@ -186,7 +192,7 @@
     flex: 0 0 70%;
     background-color: #fff;
     padding: 1em;
-    margin: 2em 0 1em;
+    margin: 1em 0 1em;
     color: #0E4174;
     border-radius: 5px;
     border: solid 0.125em #0E4174;
@@ -215,18 +221,12 @@
   @media screen and (min-width: 481px) {
     #footer {
       margin: 4em 3em 0;
-      justify-content: space-between;
     }
 
     #skip {
-      flex: 0 0 fit-content;
-      padding: 0;
       text-decoration: underline;
       border: transparent;
-    }
-
-    .disclaimer {
-      flex: 0 0 fit-content;
+      margin: 0;
     }
 
     h1 {
