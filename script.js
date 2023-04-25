@@ -16,8 +16,6 @@ function initCards() {
   });
   
   tinderContainer.classList.add('loaded');
-
-  document.getElementById('progress').innerHTML = cardIndex + " of 10";
 }
 
 allCards.forEach(function (el) {

@@ -135,26 +135,31 @@
     cursor: -moz-grabbing;
     cursor: grabbing;
   }
+
+  h2 {
+    margin-top: 0.25em;
+    font-size: 1em;
+  }
+
+  .artist {
+    font-size: 0.8125em;
+    margin-top: 0.5em;
+    color:#3b3b3b;
+  }
+
+  figure {
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+    margin: 0.75em auto 0;
+    overflow: hidden;
+  }
   
   .tinder--card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    pointer-events: none;
-  }
-  
-  .tinder--card h3 {
-    margin-top: 32px;
-    font-size: 32px;
-    padding: 0 16px;
-    pointer-events: none;
-  }
-  
-  .tinder--card p {
-    margin-top: 24px;
-    font-size: 20px;
-    padding: 0 16px;
     pointer-events: none;
   }
   
@@ -240,10 +245,20 @@
 
     .tinder--cards {
       order: 0;
-      max-width: 400px;
+      max-width: 300px;
       width: 50%;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 1 / 1;
       margin: 0.3em;
+    }
+
+    h2 {
+      margin-top: 0.5em;
+      font-size: 1.125em;
+    }
+  
+    .artist {
+      font-size: 0.8125em;
+      margin-top: 0.5em;
     }
 
     .start {
