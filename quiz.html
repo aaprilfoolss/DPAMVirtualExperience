@@ -9,12 +9,18 @@
   <body>
     <header>
       <h1>Find Your #DPAMArtMatch!</h1>
-      <!-- update to make pagination functional -->
       <span id="progress">1 of 10</span>
     </header>
+
     <div class="quiz">
+      <div id="overlay">
+        <h3>Are you sure you want to skip the quiz?</h3>
+        <p id="overlayText">You've already started on your path to discovering your unique artistic preferences and style!</p>
+        <button type="button" id="continue">Continue Quiz</button>
+        <button type="button"><a href="default.html">Skip</a></button>
+      </div>
     
-      <button id="nope"><i class="fa fa-remove"></i></button>
+      <button id="nope" class="choose"><i class="fa fa-remove"></i></button>
 
       <div class="quiz--cards">
         <div class="quiz--card">
@@ -44,7 +50,7 @@
         </div>
       </div>
 
-      <button id="love"><i class="fa fa-heart"></i></button>
+      <button id="love" class="choose"><i class="fa fa-heart"></i></button>
     </div>
 
     <div id="footer">
