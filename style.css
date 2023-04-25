@@ -108,7 +108,7 @@
     max-height: 60vw;
     aspect-ratio: 3 / 4;
     z-index: 1;
-    margin: 0 16vw 2em;
+    margin: 0 16vw 1em;
     overflow: visible;
     /* margin: 0.3em; */
   }
@@ -194,10 +194,11 @@
   }
 
   #skip {
+    max-width: 60vw;
     flex: 0 0 70%;
     background-color: #fff;
     padding: 1em;
-    margin: 1em 0 1em;
+    margin: 1.5em 0 1em;
     color: #0E4174;
     border-radius: 5px;
     border: solid 0.125em #0E4174;
@@ -208,6 +209,8 @@
 
   #skip a {
     text-decoration: none;
+    color: #0E4174;
+
   }
 
   #skip a:visited {
