@@ -85,7 +85,7 @@
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 0 50vh rgba(0, 0, 0, .5);
-    z-index: 11;
+    z-index: 12;
     visibility: hidden;
   }
 
@@ -206,7 +206,7 @@
     width: 20vw;
     max-width: 75px;
     border: 0;
-    z-index: 1;
+    z-index: 11;
     background: transparent;
     margin: 0 5vw;
     cursor: -webkit-pointer;
@@ -273,14 +273,9 @@
 
     #overlay {
       padding: 30px 50px;
-      position: absolute;
-      top: -1em;
       width: 400px;
       height: 300px;
-      background-color: #fff;
-      border-radius: 20px;
       box-shadow: 0 0 0 50vw rgba(0, 0, 0, .5);
-      z-index: 11;
     }
 
     #overlay p {
