@@ -35,6 +35,10 @@ allCards.forEach(function (el) {
     var yMulti = event.deltaY / 80;
     var rotate = xMulti * yMulti;
 
+    if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
+      event.target = event.target.parentElement;
+    }
+
     event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
   });
 
@@ -43,6 +47,10 @@ allCards.forEach(function (el) {
 
     var moveOutWidth = document.body.clientWidth;
     var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
+
+    if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
+      event.target = event.target.parentElement;
+    }
 
     event.target.classList.toggle('removed', !keep);
 
