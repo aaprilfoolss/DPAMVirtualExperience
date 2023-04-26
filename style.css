@@ -89,6 +89,17 @@
     visibility: hidden;
   }
 
+  #close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 1.5em;
+    color: #3b3b3b;
+    cursor: -webkit-pointer;
+    cursor: -moz-pointer;
+    cursor: pointer;
+  }
+
   #overlay p {
     margin-bottom: 60px;
   }
@@ -118,7 +129,7 @@
   }
 
   h3 {
-    margin: 1em 0 2em;
+    margin: 2em 0 1em;
   }
 
   .quiz {
@@ -272,10 +283,14 @@
     }
 
     #overlay {
-      padding: 30px 50px;
+      padding: 40px 50px;
       width: 400px;
       height: 300px;
       box-shadow: 0 0 0 50vw rgba(0, 0, 0, .5);
+    }
+
+    h3 {
+      margin: 1em 0;
     }
 
     #overlay p {

@@ -6,6 +6,7 @@ var nope = document.getElementById('nope');
 var love = document.getElementById('love');
 var skip = document.getElementById('skip');
 var cont = document.getElementById('continue');
+var close = document.getElementById('close');
 var cardIndex = 1;
 
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
@@ -97,7 +98,8 @@ allCards.forEach(function (el) {
 
       cardIndex++;
       document.getElementById('progress').innerHTML = cardIndex + " of 10";
-      if (cardIndex == 6) {
+      // update this number later
+      if (cardIndex == 4) {
         document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
       }
     }
@@ -160,7 +162,8 @@ function createButtonListener(love) {
 
     cardIndex++;
     document.getElementById('progress').innerHTML = cardIndex + " of 10";
-    if (cardIndex == 6) {
+    //update this number later
+    if (cardIndex == 4) {
       document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
     }
 
@@ -169,10 +172,14 @@ function createButtonListener(love) {
 }
 
 function skipListener() {
-  document.getElementById('overlay').style.visibility = "visible";
+  document.getElementById('overlay').style.visibility = 'visible';
 }
 
 function contListener()  {
+  document.getElementById('overlay').style.visibility = 'hidden';
+}
+
+function closeListener() {
   document.getElementById('overlay').style.visibility = 'hidden';
 }
 
@@ -183,6 +190,8 @@ nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
 skip.addEventListener('click', skipListener);
 cont.addEventListener('click', contListener);
+close.addEventListener('click', closeListener);
+
 
 window.onload = initCards();
 
