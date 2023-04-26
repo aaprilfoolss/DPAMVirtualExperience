@@ -29,9 +29,9 @@
     align-items: center;
     margin: auto;
     width: 80vw;
-    max-width: 500px;
+    max-width: 300px;
     height: 70vw;
-    max-height: 450px;
+    max-height: 300px;
     border-radius: 20px;
     border: transparent;
     background-color: #FFFFFF;
@@ -44,6 +44,7 @@
   .start p {
     text-align: center;
     width: 70vw;
+    max-width: 250px;
     position: absolute;
     margin: 0 1em;
     padding: .75em;
@@ -198,7 +199,7 @@
     color:#3b3b3b;
   }
 
-  figure {
+  .quiz--card figure {
     width: 90%;
     height: 70%;
     border-radius: 10px;
@@ -276,15 +277,44 @@
     color: #fa5d5d;
   }
 
-  @media screen and (min-width: 481px) {
-    #footer {
-      margin: 4em 3em 0;
+  @media screen and (min-width: 768px) {
+    .start {
+      height: fit-content;
+      max-width: 500px;
+      max-height: 450px;
+    }
+
+    .start p {
+      position: relative;
+      text-align: center;
+      flex: 1 0 45%;
+      margin: 0 1em;
+      padding: .75em;
+      max-width: none;
+      border-radius: 20px;
+    }
+    
+    .start figure {
+      flex: 1 0 45%;
+
     }
 
     #skip {
       text-decoration: underline;
       border: transparent;
       margin: 0;
+    }
+
+  }
+
+  @media screen and (min-width: 481px) {
+
+    #skip {
+      max-width: 300px;
+    }
+
+    #footer {
+      margin: 4em 3em 0;
     }
 
     #overlay {
@@ -328,23 +358,5 @@
     .artist {
       font-size: 0.8125em;
       margin-top: 0.5em;
-    }
-
-    .start {
-      height: fit-content;
-    }
-
-    .start p {
-      position: relative;
-      text-align: center;
-      flex: 1 0 45%;
-      margin: 0 1em;
-      padding: .75em;
-      border-radius: 20px;
-    }
-    
-    .start figure {
-      flex: 1 0 45%;
-
     }
   }
