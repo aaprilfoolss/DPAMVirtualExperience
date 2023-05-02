@@ -51,7 +51,7 @@ allCards.forEach(function (el) {
     el.classList.remove('moving');
 
     var moveOutWidth = document.body.clientWidth;
-    var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
+    var keep = Math.abs(event.deltaX) < 80 && Math.abs(event.velocityX) < 0.5;
 
     if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
       event.target = event.target.parentElement;
@@ -93,6 +93,10 @@ allCards.forEach(function (el) {
           default:
             console.log('error: no type');
         }
+
+        //add in like animation
+      } else {
+        //add in dislike animation
       }
 
       var cards = document.querySelectorAll('.quiz--card:not(.removed)');
