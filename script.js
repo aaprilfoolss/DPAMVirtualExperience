@@ -42,7 +42,16 @@ allCards.forEach(function (el) {
       event.target = event.target.parentElement;
     }
 
-    if (event.target.style.getPropertyValue('z-index') != 5) { return; }
+    if (event.target.style.getPropertyValue('z-index') != 10) { return; }
+
+    if (event.deltaX > 170) {
+      love.firstChild.classList.add('active');
+    } else if (event.deltaX < -170) {
+      nope.firstChild.classList.add('active');
+    } else {
+      love.firstChild.classList.remove('active');
+      nope.firstChild.classList.remove('active');
+    }
 
     event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
   });
@@ -70,6 +79,9 @@ allCards.forEach(function (el) {
       var yMulti = event.deltaY / 80;
       var rotate = xMulti * yMulti;
 
+      love.firstChild.classList.remove('active');
+      nope.firstChild.classList.remove('active');
+
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
       initCards();
 
@@ -93,10 +105,6 @@ allCards.forEach(function (el) {
           default:
             console.log('error: no type');
         }
-
-        //add in like animation
-      } else {
-        //add in dislike animation
       }
 
       var cards = document.querySelectorAll('.quiz--card:not(.removed)');
