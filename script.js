@@ -121,6 +121,7 @@ allCards.forEach(function (el) {
       cardIndex++;
       //updating progress display
       document.getElementById('progress').innerHTML = cardIndex + " of 10";
+      //update skip confirmation message when user is more than halfway through
       if (cardIndex == 6) {
         document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
       }
@@ -197,6 +198,7 @@ function createButtonListener(love) {
     cardIndex++;
     //updating progress display
     document.getElementById('progress').innerHTML = cardIndex + " of 10";
+    //update skip confirmation message when user is more than halfway through
     if (cardIndex == 6) {
       document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
     }
