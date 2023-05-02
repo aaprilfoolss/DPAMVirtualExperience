@@ -30,6 +30,7 @@ allCards.forEach(function (el) {
     el.classList.add('moving');
   });
 
+  //handle when user is moving card
   hammertime.on('pan', function (event) {
     if (event.deltaX === 0) return;
     if (event.center.x === 0 && event.center.y === 0) return;
@@ -42,8 +43,10 @@ allCards.forEach(function (el) {
       event.target = event.target.parentElement;
     }
 
+    //don't allow users to interact with cards other than the top card
     if (event.target.style.getPropertyValue('z-index') != 10) { return; }
 
+    //add active animations to like/dislike buttons for users who are swiping
     if (event.deltaX > 170) {
       love.firstChild.classList.add('active');
     } else if (event.deltaX < -170) {
@@ -56,6 +59,7 @@ allCards.forEach(function (el) {
     event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
   });
 
+  //handle after user stops moving card
   hammertime.on('panend', function (event) {
     el.classList.remove('moving');
 
@@ -85,6 +89,7 @@ allCards.forEach(function (el) {
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
       initCards();
 
+      //add to appropriate result sum
       if (event.deltaX > 0) {
         switch(event.target.getElementsByTagName('img')[0].classList[0]){
           case 'chameleon':
@@ -114,6 +119,7 @@ allCards.forEach(function (el) {
       }, 500);
 
       cardIndex++;
+      //updating progress display
       document.getElementById('progress').innerHTML = cardIndex + " of 10";
       if (cardIndex == 6) {
         document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
@@ -143,6 +149,7 @@ function result() {
 
 }
 
+//button to 'like' artwork
 function createButtonListener(love) {
   return function (event) {
     var cards = document.querySelectorAll('.quiz--card:not(.removed)');
@@ -154,6 +161,7 @@ function createButtonListener(love) {
 
     if (love) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+      //add to appropriate result sum
       switch(card.getElementsByTagName('img')[0].classList[0]){
         case 'chameleon':
           chameleon++;
@@ -187,6 +195,7 @@ function createButtonListener(love) {
     }, 500);
 
     cardIndex++;
+    //updating progress display
     document.getElementById('progress').innerHTML = cardIndex + " of 10";
     if (cardIndex == 6) {
       document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
@@ -196,6 +205,7 @@ function createButtonListener(love) {
   };
 }
 
+//buttons that open/close the skip overlay
 function skipListener() {
   document.getElementById('overlay').style.visibility = 'visible';
 }
@@ -218,9 +228,22 @@ cont.addEventListener('click', contListener);
 close.addEventListener('click', closeListener);
 
 
-window.onload = initCards();
+window.onload = () => {
+  // demo of swiping to show users how to interact
+  var demo = document.querySelector('.quiz--card');
+  demo.style.transform ='translate(50px,0px) rotate(10deg)';
+  demo.style.transition = '0.5s';
+  setTimeout(() => {
+    demo.style.transform ='translate(-50px,0px) rotate(-10deg)';
+  }, 500);
+  setTimeout(() => {
+    demo.style.transform ='';
+  }, 1000);
+  initCards();
+};
 
 window.addEventListener( "pageshow", function ( event ) {
+  //reload page if user goes backwards
   if(window.performance.getEntriesByType('navigation')[0] == null) return;
 
   var historyTraversal = event.persisted || 
