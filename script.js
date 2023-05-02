@@ -51,7 +51,8 @@ allCards.forEach(function (el) {
     el.classList.remove('moving');
 
     var moveOutWidth = document.body.clientWidth;
-    var keep = Math.abs(event.deltaX) < 80 && Math.abs(event.velocityX) < 0.5;
+    console.log(event.deltaX);
+    var keep = Math.abs(event.deltaX) < 170 && Math.abs(event.velocityX) < 0.5;
 
     if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
       event.target = event.target.parentElement;
