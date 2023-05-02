@@ -51,7 +51,6 @@ allCards.forEach(function (el) {
     el.classList.remove('moving');
 
     var moveOutWidth = document.body.clientWidth;
-    console.log(event.deltaX);
     var keep = Math.abs(event.deltaX) < 170 && Math.abs(event.velocityX) < 0.5;
 
     if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
@@ -108,8 +107,7 @@ allCards.forEach(function (el) {
 
       cardIndex++;
       document.getElementById('progress').innerHTML = cardIndex + " of 10";
-      // update this number later
-      if (cardIndex == 4) {
+      if (cardIndex == 6) {
         document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
       }
     }
@@ -117,13 +115,22 @@ allCards.forEach(function (el) {
 });
 
 function result() {
-  console.log(chameleon + ' ' + historian + ' ' + sensitive + ' ' + thrillSeeker + ' ' + traditionalist);
+  var types = {
+    'chameleon': chameleon,
+    'historian': historian,
+    'sensitive': sensitive,
+    'thrillSeeker': thrillSeeker,
+    'traditionalist': traditionalist
+  };
 
-  // Math.max[chameleon, historian, sensitive, thrillSeeker, traditionalist];
+  //redirect to appropriate result type
 
-
-  if (chameleon > 0) {
-    window.location.href = "chameleon.html";
+  switch(Object.keys(types).reduce((a, b) => types[a] > types[b] ? a : b)) {
+    case ('chameleon'): window.location.href = 'chameleon.html'; break;
+    case ('historian'): window.location.href = 'historian.html'; break;
+    case ('sensitive'): window.location.href = 'sensitive.html'; break;
+    case ('thrillSeeker'): window.location.href = 'thrillSeeker.html'; break;
+    case ('traditionalist'): window.location.href = 'traditionalist.html'; break;
   }
 
 }
@@ -173,8 +180,7 @@ function createButtonListener(love) {
 
     cardIndex++;
     document.getElementById('progress').innerHTML = cardIndex + " of 10";
-    //update this number later
-    if (cardIndex == 4) {
+    if (cardIndex == 6) {
       document.getElementById('overlayText').innerHTML = 'You\'re so close to  discovering your unique artistic preferences and style!';
     }
 

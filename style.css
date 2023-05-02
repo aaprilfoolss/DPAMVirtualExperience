@@ -156,7 +156,7 @@
   .quiz--cards {
     order: 1;
     position: relative;
-    max-height: 60vw;
+    max-height: 40vh;
     width: 50vw;
     aspect-ratio: 3 / 4;
     z-index: 1;
@@ -190,11 +190,12 @@
 
   h2 {
     margin-top: 0.25em;
-    font-size: 1em;
+    font-size: 0.75em;
+    padding: 0 .5em;
   }
 
   .artist {
-    font-size: 0.8125em;
+    font-size: 0.75em;
     margin-top: 0.5em;
     color:#3b3b3b;
   }
@@ -351,12 +352,12 @@
     }
 
     h2 {
-      margin-top: 0.5em;
-      font-size: 1.125em;
+      margin-top: 0.75em;
+      font-size: 0.8125em;
     }
   
     .artist {
-      font-size: 0.8125em;
+      font-size: 0.75em;
       margin-top: 0.5em;
     }
   }
