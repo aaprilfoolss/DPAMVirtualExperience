@@ -46,7 +46,7 @@ allCards.forEach(function (el) {
     //don't allow users to interact with cards other than the top card
     if (event.target.style.getPropertyValue('z-index') != 10) { return; }
 
-    //add active animations to like/dislike buttons for users who are swiping
+    //add active animations to like/dislike buttons for users who are swiping (deltaX threshold)
     if (event.deltaX > 170) {
       love.firstChild.classList.add('active');
     } else if (event.deltaX < -170) {
@@ -66,6 +66,7 @@ allCards.forEach(function (el) {
     var moveOutWidth = document.body.clientWidth;
     var keep = Math.abs(event.deltaX) < 170 && Math.abs(event.velocityX) < 0.5;
 
+    //add icon animation when user swipes quickly (aka doesn't hit deltaX threshold)
     if(event.velocityX >= 0.5) {
       love.firstChild.classList.add('active');
     } else if (event.velocityX <= -0.5) {
