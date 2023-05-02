@@ -66,6 +66,12 @@ allCards.forEach(function (el) {
     var moveOutWidth = document.body.clientWidth;
     var keep = Math.abs(event.deltaX) < 170 && Math.abs(event.velocityX) < 0.5;
 
+    if(event.velocityX >= 0.5) {
+      love.firstChild.classList.add('active');
+    } else if (event.velocityX <= -0.5) {
+      nope.firstChild.classList.add('active');
+    }
+
     if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
       event.target = event.target.parentElement;
     }
@@ -83,8 +89,11 @@ allCards.forEach(function (el) {
       var yMulti = event.deltaY / 80;
       var rotate = xMulti * yMulti;
 
-      love.firstChild.classList.remove('active');
-      nope.firstChild.classList.remove('active');
+
+      setTimeout(() => {
+        love.firstChild.classList.remove('active');
+        nope.firstChild.classList.remove('active');
+      }, 400);
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
       initCards();
