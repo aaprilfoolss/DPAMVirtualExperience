@@ -20,7 +20,7 @@
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .start {
@@ -226,7 +226,7 @@
     border: 0;
     z-index: 11;
     background: transparent;
-    margin: 0 5vw;
+    margin: 0 5vw 2em;
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
     cursor: pointer;
@@ -246,6 +246,14 @@
     font-size: 6em;
     opacity: 0.7;
     transition: all .2s ease;
+  }
+
+  .choose span {
+    display: block;
+    font-size: 0.85em;
+    padding: 0;
+    line-height: initial;
+    color:#3b3b3b;
   }
 
   #footer {
