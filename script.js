@@ -21,6 +21,8 @@ function initCards() {
   quizContainer.classList.add('loaded');
 }
 
+initCards();
+
 allCards.forEach(function (el) {
   var hammertime = new Hammer(el);
 
@@ -39,6 +41,8 @@ allCards.forEach(function (el) {
     if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
       event.target = event.target.parentElement;
     }
+
+    if (event.target.style.getPropertyValue('z-index') != 5) { return; }
 
     event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
   });
@@ -67,6 +71,7 @@ allCards.forEach(function (el) {
       var rotate = xMulti * yMulti;
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
+      initCards();
 
       if (event.deltaX > 0) {
         switch(event.target.getElementsByTagName('img')[0].classList[0]){
@@ -150,6 +155,7 @@ function createButtonListener(love) {
       }
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+      initCards();
     }
 
     card.classList.add('removed');
