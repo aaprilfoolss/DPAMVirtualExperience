@@ -39,8 +39,13 @@ allCards.forEach(function (el) {
     var yMulti = event.deltaY / 80;
     var rotate = xMulti * yMulti;
 
-    if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
+    //if event target registers as card content, set it to the card
+    if (event.target.parentElement == document.querySelector('.quiz--card')) {
       event.target = event.target.parentElement;
+    }
+    //don't allow users to grab something other than the cards themselves 
+    else if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
+      return;
     }
 
     //don't allow users to interact with cards other than the top card
@@ -61,6 +66,9 @@ allCards.forEach(function (el) {
 
   //handle after user stops moving card
   hammertime.on('panend', function (event) {
+
+    // console.log(event.target);
+
     el.classList.remove('moving');
 
     var moveOutWidth = document.body.clientWidth;
@@ -73,9 +81,10 @@ allCards.forEach(function (el) {
       nope.firstChild.classList.add('active');
     }
 
+    //only allow following transformations on cards
     if (!event.target.isEqualNode(document.querySelector('.quiz--card'))) {
-      event.target = event.target.parentElement;
-    }
+      return;
+    };
 
     event.target.classList.toggle('removed', !keep);
 
@@ -125,7 +134,7 @@ allCards.forEach(function (el) {
       var cards = document.querySelectorAll('.quiz--card:not(.removed)');
       if (!cards.length) result();
       setTimeout(() => {
-        event.target.remove();
+        event.target.remove();        
       }, 500);
 
       cardIndex++;
