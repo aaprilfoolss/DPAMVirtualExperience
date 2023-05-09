@@ -8,6 +8,7 @@ var skip = document.getElementById('skip');
 var cont = document.getElementById('continue');
 var close = document.getElementById('close');
 var cardIndex = 1;
+var xThreshold = 100;
 
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
 
@@ -52,9 +53,9 @@ allCards.forEach(function (el) {
     if (event.target.style.getPropertyValue('z-index') != 10) { return; }
 
     //add active animations to like/dislike buttons for users who are swiping (deltaX threshold)
-    if (event.deltaX > 170) {
+    if (event.deltaX > xThreshold) {
       love.firstChild.classList.add('active');
-    } else if (event.deltaX < -170) {
+    } else if (event.deltaX < -xThreshold) {
       nope.firstChild.classList.add('active');
     } else {
       love.firstChild.classList.remove('active');
@@ -250,6 +251,11 @@ close.addEventListener('click', closeListener);
 
 
 window.onload = () => {
+
+  if (screen.width > 400) {
+      xThreshold = 170;
+  }
+
   // demo of swiping to show users how to interact
   var demo = document.querySelector('.quiz--card');
   demo.style.transform ='translate(50px,0px) rotate(10deg)';
