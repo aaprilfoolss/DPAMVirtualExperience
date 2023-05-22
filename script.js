@@ -6,7 +6,10 @@ var nope = document.getElementById('nope');
 var love = document.getElementById('love');
 var skip = document.getElementById('skip');
 var cont = document.getElementById('continue');
-var close = document.getElementById('close');
+var exit = document.getElementById('close');
+var exit2 = document.getElementById('close2');
+var help = document.getElementById('help');
+var isOnDiv;
 var cardIndex = 1;
 var xThreshold = 100;
 
@@ -170,9 +173,14 @@ function result() {
 
 }
 
-//button to 'like' artwork
+//handle 'like'/'dislike' icon events
 function createButtonListener(love) {
   return function (event) {
+    if ((document.getElementById('helpOverlay').style.visibility === 'visible' || document.getElementById('overlay').style.visibility === 'visible')) {
+      return;
+    }
+
+
     var cards = document.querySelectorAll('.quiz--card:not(.removed)');
     var moveOutWidth = document.body.clientWidth * 1.5;
 
@@ -229,15 +237,29 @@ function createButtonListener(love) {
 
 //buttons that open/close the skip overlay
 function skipListener() {
+  if(document.getElementById('helpOverlay').style.visibility === 'visible') {
+    return;
+  }
   document.getElementById('overlay').style.visibility = 'visible';
+}
+
+function helpListener() {
+  if(document.getElementById('overlay').style.visibility === 'visible') {
+    return;
+  }
+  document.getElementById('helpOverlay').style.visibility = 'visible';
 }
 
 function contListener()  {
   document.getElementById('overlay').style.visibility = 'hidden';
 }
 
-function closeListener() {
+function exitListener() {
   document.getElementById('overlay').style.visibility = 'hidden';
+}
+
+function exit2Listener() {
+  document.getElementById('helpOverlay').style.visibility = 'hidden';
 }
 
 var nopeListener = createButtonListener(false);
@@ -247,8 +269,9 @@ nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
 skip.addEventListener('click', skipListener);
 cont.addEventListener('click', contListener);
-close.addEventListener('click', closeListener);
-
+exit.addEventListener('click', exitListener);
+exit2.addEventListener('click', exit2Listener);
+help.addEventListener('click', helpListener);
 
 window.onload = () => {
 

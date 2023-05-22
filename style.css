@@ -21,6 +21,7 @@
 
   h1 {
     font-size: 1.5em;
+    margin-bottom: 0.25em;
   }
 
   .start {
@@ -76,11 +77,21 @@
 
   #progress {
     color:#3b3b3b;
-    display: block;
-    margin-top: 1em;
+    margin-right: 0.25em;
   }
 
-  #overlay {
+  .fa-circle-question {
+    color: #0E4174 ;
+    cursor: -webkit-pointer;
+    cursor: -moz-pointer;
+    cursor: pointer;
+  }
+
+  #helpOverlay {
+    height: 300px;
+  }
+
+  .overlay {
     padding: 30px;
     position: absolute;
     top: -1em;
@@ -95,12 +106,12 @@
     visibility: hidden;
   }
 
-  #close {
+  .close {
     position: absolute;
     right: 25px;
     top: 25px;
     font-size: 1.5em;
-    color: #3b3b3b;
+    color: #3b3b3b !important;
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
     cursor: pointer;
@@ -333,11 +344,15 @@
       margin: 4em 3em 0;
     }
 
-    #overlay {
+    .overlay {
       padding: 40px 50px;
       width: 400px;
       height: 300px;
       box-shadow: 0 0 0 50vw rgba(0, 0, 0, .5);
+    }
+
+    #helpOverlay {
+      height: 250px;
     }
 
     h3 {

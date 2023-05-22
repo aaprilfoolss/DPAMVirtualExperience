@@ -10,11 +10,20 @@
     <header>
       <h1>Find Your #DPAMArtMatch!</h1>
       <span id="progress">1 of 10</span>
+      <i id="help" class="fa fa-circle-question"></i>
     </header>
 
     <div class="quiz">
-      <div id="overlay">
-        <i id="close" class="fa fa-remove" aria-hidden="true"></i>
+      <!-- help tooltip overlay -->
+      <div id="helpOverlay" class="overlay">
+        <i id="close2" class="fa fa-remove close" aria-hidden="true"></i>
+        <h3>#DPAMArtMatch Quiz Help</h3>
+        <p>To get started, swipe or click on the icons to "like" and "dislike" each artwork you see. At the end, you'll be matched with one of our curated results!</p>
+      </div>
+
+      <!-- skip quiz confirmation overlay -->
+      <div id="overlay" class="overlay">
+        <i id="close" class="fa fa-remove close" aria-hidden="true"></i>
         <h3>Are you sure you want to skip the quiz?</h3>
         <p id="overlayText">You've already started on your path to discovering your unique artistic preferences and style!</p>
         <button type="button" id="continue">Continue Quiz</button>
