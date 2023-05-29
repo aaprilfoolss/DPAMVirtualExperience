@@ -281,7 +281,7 @@ help.addEventListener('mouseout', exitHelpListener);
 
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent) ) {
   help.addEventListener('click', helpListener);
-  document.getElementById('helpOverlay').style.padding = 'padding: 2em 8px;'
+  document.getElementById('helpOverlay').style.padding = 'padding: 2em;'
 } else {
   document.getElementById('close2').remove();
 }
