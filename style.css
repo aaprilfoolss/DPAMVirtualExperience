@@ -109,7 +109,7 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 80vw;
     font-size: .75em;
     border-radius: 10px;
-    padding: 8px;
+    padding: 0.5em 1em 1em;
     box-shadow: 0 0 10px 0 #aaa;
     -webkit-box-shadow: 0 0 10px 0 #aaa;
     -moz-box-shadow: 0 0 10px 0 #aaa;
