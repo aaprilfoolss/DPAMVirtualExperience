@@ -8,7 +8,6 @@
 
 body {
   font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-size: 1.25em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
@@ -16,7 +15,6 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto Condensed','Helvetica Neue',Helvetica,Arial,sans-serif;
   text-transform: uppercase;
-  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: currentColor;}
 
 /* end dpam styles */
@@ -24,23 +22,26 @@ h1,h2,h3,h4,h5,h6 {
   body {
     overflow-x: hidden;
     text-align: center;
+    font-size: 1.15em;
   }
 
   header {
-    text-align: center;
-    padding: 2em 1em;
+    text-align: left;
+    padding: 1.5em 1em 1em;
   }
 
   h1 {
-    font-size: 1.5em;
-    margin-bottom: 0.25em;
+    font-size: 1.75em;
+    padding: 0 0 1rem;
+    color: #0057b7;
+    border-bottom: 3px solid #0057b7;
   }
 
   .start {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 1em auto 0;
     width: 80vw;
     max-width: 400px;
     height: 70vw;
@@ -71,27 +72,27 @@ h1,h2,h3,h4,h5,h6 {
 
   main button {
     background-color: #0E4174;
-    padding: 1em 6em;
-    margin: 3em 0 1.5em;
+    padding: 1em 5em;
+    margin: 2em 0 1.5em;
     color: #ffffff;
     border-radius: 5px;
     border: transparent;
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
     cursor: pointer;
-    font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-weight: bold;
   }
 
   main a {
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     display: block;
     font-size: 0.75em;
   }
 
   #progress {
     color:#3b3b3b;
-    margin-right: 0.25em;
+    margin-bottom: 1em;
+    flex: 1 0 100%;
   }
 
   .fa-circle-question {
@@ -102,15 +103,32 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   #helpOverlay {
-    height: 300px;
+    height: fit-content;
+    top: 2.5em;
+    width: 370px;
+    max-width: 80vw;
+    font-size: .75em;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 0 10px 0 #aaa;
+    -webkit-box-shadow: 0 0 10px 0 #aaa;
+    -moz-box-shadow: 0 0 10px 0 #aaa;
+  }
+
+  #helpOverlay p {
+    padding-bottom: 10px;
+  }
+
+  #helpOverlay h3 {
+    margin: 1em 0 .5em;
   }
 
   .overlay {
-    padding: 30px;
+    padding: 20px;
     position: absolute;
     top: -1em;
     width: 300px;
-    height: 350px;
+    height: 375px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 0 50vh rgba(0, 0, 0, .5);
@@ -122,8 +140,8 @@ h1,h2,h3,h4,h5,h6 {
 
   .close {
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 15px;
+    top: 15px;
     font-size: 1.5em;
     color: #3b3b3b !important;
     cursor: -webkit-pointer;
@@ -132,7 +150,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   #overlay p {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   #overlay button {
@@ -163,6 +181,11 @@ h1,h2,h3,h4,h5,h6 {
     margin: 2em 0 1em;
   }
 
+  button {
+    font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 0.75em;
+  }
+
   .quiz {
     margin: auto;
     display: flex;
@@ -181,8 +204,9 @@ h1,h2,h3,h4,h5,h6 {
   .quiz--cards {
     order: 1;
     position: relative;
-    max-height: 40vh;
-    width: 60vw;
+    max-height: 50vh;
+    width: 70vw;
+    max-width: 350px;
     aspect-ratio: 3 / 4;
     z-index: 1;
     margin: 0 16vw 1em;
@@ -227,7 +251,7 @@ h1,h2,h3,h4,h5,h6 {
 
   .quiz--card figure {
     width: 90%;
-    height: 70%;
+    height: 65%;
     border-radius: 10px;
     margin: 0.75em auto 0;
     overflow: hidden;
@@ -251,7 +275,7 @@ h1,h2,h3,h4,h5,h6 {
     border: 0;
     z-index: 11;
     background: transparent;
-    margin: 0 5vw 2em;
+    margin: 0 6vw;
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
     cursor: pointer;
@@ -268,7 +292,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .quiz .choose .active {
-    font-size: 6em;
+    font-size: 5em;
     opacity: 0.7;
     transition: all .2s ease;
   }
@@ -279,6 +303,8 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0;
     line-height: initial;
     color:#3b3b3b;
+    font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    text-transform: uppercase;
   }
 
   #footer {
@@ -318,6 +344,13 @@ h1,h2,h3,h4,h5,h6 {
     color: #fa5d5d;
   }
 
+  @media screen and (min-width: 850px) {
+    #helpOverlay {
+      left: 55vw;
+      top: 0;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     .start {
       height: fit-content;
@@ -330,9 +363,23 @@ h1,h2,h3,h4,h5,h6 {
       text-align: center;
       flex: 1 0 45%;
       margin: 0 .5em;
-      padding: .75em;
+      padding: .25em .75em .75em;
       max-width: none;
       border-radius: 20px;
+    }
+
+    .quiz .choose {
+      margin: 0;
+      order: 0;
+    }
+
+    .quiz--cards {
+      order: 0;
+      max-width: 350px;
+      height: auto;
+      width: 50%;
+      aspect-ratio: 1 / 1;
+      margin: 0.3em;
     }
     
     .start figure {
@@ -355,18 +402,14 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     #footer {
-      margin: 4em 3em 0;
+      margin: 2em 3em 0;
     }
 
     .overlay {
       padding: 40px 50px;
       width: 400px;
-      height: 300px;
-      box-shadow: 0 0 0 50vw rgba(0, 0, 0, .5);
-    }
-
-    #helpOverlay {
-      height: 250px;
+      height: 350px;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, .5);
     }
 
     h3 {
@@ -378,21 +421,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     h1 {
-      font-size: 2.5em;
-    }
-
-    .quiz .choose {
-      margin: 0 20px;
-      order: 0;
-    }
-
-    .quiz--cards {
-      order: 0;
-      max-width: 300px;
-      height: auto;
-      width: 50%;
-      aspect-ratio: 1 / 1;
-      margin: 0.3em;
+      font-size: 2em;
     }
 
     h2 {

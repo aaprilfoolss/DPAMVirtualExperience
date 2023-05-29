@@ -12,6 +12,7 @@ var help = document.getElementById('help');
 var isOnDiv;
 var cardIndex = 1;
 var xThreshold = 100;
+var mobile = false;
 
 var chameleon = 0, historian = 0, sensitive = 0, thrillSeeker = 0, traditionalist = 0;
 
@@ -250,6 +251,10 @@ function helpListener() {
   document.getElementById('helpOverlay').style.visibility = 'visible';
 }
 
+function exitHelpListener() {
+  document.getElementById('helpOverlay').style.visibility = 'hidden';
+}
+
 function contListener()  {
   document.getElementById('overlay').style.visibility = 'hidden';
 }
@@ -271,7 +276,15 @@ skip.addEventListener('click', skipListener);
 cont.addEventListener('click', contListener);
 exit.addEventListener('click', exitListener);
 exit2.addEventListener('click', exit2Listener);
-help.addEventListener('click', helpListener);
+help.addEventListener('mouseover', helpListener);
+help.addEventListener('mouseout', exitHelpListener);
+
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent) ) {
+  help.addEventListener('click', helpListener);
+  document.getElementById('helpOverlay').style.padding = 'padding: 2em 8px;'
+} else {
+  document.getElementById('close2').remove();
+}
 
 window.onload = () => {
 
