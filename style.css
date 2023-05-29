@@ -89,7 +89,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 0.75em;
   }
 
-  #progress {
+  .progress {
     color:#3b3b3b;
     margin-bottom: 1em;
     flex: 1 0 100%;
