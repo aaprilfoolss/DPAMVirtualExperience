@@ -126,8 +126,9 @@ h1,h2,h3,h4,h5,h6 {
   .overlay {
     padding: 20px;
     position: absolute;
-    top: -1em;
-    width: 300px;
+    top: -.75em;
+    width: 80vw;
+    max-width: 350px;
     height: 375px;
     background-color: #fff;
     border-radius: 20px;
