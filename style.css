@@ -204,7 +204,7 @@ h1,h2,h3,h4,h5,h6 {
   .quiz--cards {
     order: 1;
     position: relative;
-    max-height: 50vh;
+    max-height: 45vh;
     width: 70vw;
     max-width: 350px;
     aspect-ratio: 3 / 4;
