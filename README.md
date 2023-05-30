@@ -1,4 +1,4 @@
 # quiz
 
-This repository is home to the beta personality test for UXD395: Senior UX Capstone
-https://github.io/aaprilfoolss/quiz
+This repository is home to the coded personality test for DPAM's Virtual Experience : 
+[https://github.io/aaprilfoolss/quiz](https://aaprilfoolss.github.io/quiz)
