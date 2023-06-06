@@ -404,24 +404,6 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 400px;
   }
 
-  form {
-    margin-bottom: 2em;
-  }
-
-  label {
-    display: block;
-    text-align: left;
-    margin: auto;
-    width: 200px;
-  }
-
-  input {
-    display: block;
-    margin: auto;
-    width: 200px;
-    padding: .25em;
-  }
-
   #submit {
     display: block;
     background-color: #0E4174;
@@ -527,17 +509,5 @@ h1,h2,h3,h4,h5,h6 {
     .artist {
       font-size: 0.75em;
       margin-top: 0.5em;
-    }
-
-    label {
-      display: inline;
-      text-align: center;
-      width: 200px;
-    }
-  
-    input {
-      display: inline;
-      width: 200px;
-      padding: .25em;
     }
   }
