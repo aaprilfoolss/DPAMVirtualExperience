@@ -246,7 +246,7 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 350px;
     aspect-ratio: 3 / 4;
     z-index: 1;
-    margin: 0 16vw 1em;
+    margin: 0 16vw .25em;
     overflow: visible;
     /* margin: 0.3em; */
   }
