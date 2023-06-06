@@ -167,11 +167,11 @@ function result() {
   //redirect to appropriate result type
 
   switch(Object.keys(types).reduce((a, b) => types[a] > types[b] ? a : b)) {
-    case ('chameleon'): window.location.href = 'Chameleon.html'; break;
-    case ('historian'): window.location.href = 'Historian.html'; break;
-    case ('sensitive'): window.location.href = 'Sensitive.html'; break;
-    case ('thrillSeeker'): window.location.href = 'ThrillSeeker.html'; break;
-    case ('traditionalist'): window.location.href = 'Traditionalist.html'; break;
+    case ('chameleon'): window.location.href = 'chameleon.html'; break;
+    case ('historian'): window.location.href = 'historian.html'; break;
+    case ('sensitive'): window.location.href = 'sensitive.html'; break;
+    case ('thrillSeeker'): window.location.href = 'thrillSeeker.html'; break;
+    case ('traditionalist'): window.location.href = 'traditionalist.html'; break;
   }
 
 }
