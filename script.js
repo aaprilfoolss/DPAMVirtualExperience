@@ -145,7 +145,7 @@ allCards.forEach(function (el) {
       cardIndex++;
       //updating progress display
       if (cardIndex <= 10) {
-        document.getElementById('progress').innerHTML = cardIndex + " of 10 ";
+        document.getElementById('progress').innerHTML = cardIndex + " of 10";
       }
       //update skip confirmation message when user is more than halfway through
       if (cardIndex == 6) {
@@ -229,7 +229,7 @@ function createButtonListener(love) {
     cardIndex++;
     //updating progress display
     if (cardIndex <= 10) {
-      document.getElementById('progress').innerHTML = cardIndex + " of 10 ";
+      document.getElementById('progress').innerHTML = cardIndex + " of 10";
     }
     //update skip confirmation message when user is more than halfway through
     if (cardIndex == 6) {

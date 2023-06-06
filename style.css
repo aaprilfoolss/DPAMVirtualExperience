@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
     color: #0057b7;
   }
 
-  header a {
+  header span a {
     text-decoration: underline;
     color:#0057b7;
   }
@@ -44,8 +44,10 @@ h1,h2,h3,h4,h5,h6 {
     color:#0057b7;
   }
 
-  header h2 {
-    text-transform: none;
+  header span {
+    display: block;
+    font-weight: bold;
+    font-family: 'Roboto Condensed','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-style: italic;
     padding: 0 0 1rem;
     font-size: .75em;
@@ -72,6 +74,10 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .start p {
+    margin-top: 1em;
+  }
+
+  .start div {
     text-align: center;
     width: 70vw;
     max-width: 300px;
@@ -79,7 +85,11 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0 1em;
     padding: .75em;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, .7);
+  }
+  .start h2 {
+    font-size: 1.25em;
+    color: #0057b7;
   }
 
   .start img {
@@ -105,13 +115,15 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 0.75em;
   }
 
-  .progress {
+  #progress {
     color:#3b3b3b;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     flex: 1 0 100%;
   }
 
   .fa-circle-question {
+    margin-left: .5em;
+    margin-bottom: .5em;
     color: #0E4174 ;
     cursor: -webkit-pointer;
     cursor: -moz-pointer;
@@ -120,7 +132,7 @@ h1,h2,h3,h4,h5,h6 {
 
   #helpOverlay {
     height: fit-content;
-    top: 2.5em;
+    top: 3em;
     width: 370px;
     max-width: 80vw;
     font-size: .75em;
@@ -186,6 +198,7 @@ h1,h2,h3,h4,h5,h6 {
 
   a {
     text-decoration: none;
+    color:#0057b7;
   }
 
   #overlay #continue {
@@ -212,6 +225,13 @@ h1,h2,h3,h4,h5,h6 {
     position: relative;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
+  }
+
+  .quiz h2 {
+    border: none;
+    margin: 0 0 0.25em;
+    font-size: 1.5em;
+    color: #0057b7;
   }
   
   .loaded.quiz {
@@ -347,7 +367,7 @@ h1,h2,h3,h4,h5,h6 {
   .disclaimer {
     flex: 1 0 80%;
     margin-top: 0.5em;
-    bottom: 3em;
+    margin-bottom: 3em;
     width: 100%;
     font-size: 0.75em;
     color:#3b3b3b;
@@ -376,7 +396,7 @@ h1,h2,h3,h4,h5,h6 {
     color:#0057b7;
   }
 
-  .results h3 {
+  .results h2 {
     border: none;
     margin: 0 0 0.5em;
     font-size: 1.75em;
@@ -404,24 +424,16 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 400px;
   }
 
-  #submit {
-    display: block;
-    background-color: #0E4174;
-    padding: 1em 5em;
-    margin: 1em auto;
-    color: #ffffff;
-    border-radius: 5px;
-    border: transparent;
-    cursor: -webkit-pointer;
-    cursor: -moz-pointer;
-    cursor: pointer;
-    font-weight: bold;
+  .results .disclaimer {
+    margin: 0 auto 3em;
+    font-size: 0.75em;
+    color:#3b3b3b;
   }
 
   @media screen and (min-width: 850px) {
     #helpOverlay {
-      left: 55vw;
-      top: 0;
+      left: 52vw;
+      top: 3em;
     }
   }
 
@@ -432,7 +444,7 @@ h1,h2,h3,h4,h5,h6 {
       max-height: 450px;
     }
 
-    .start p {
+    .start div {
       position: relative;
       text-align: center;
       flex: 1 0 45%;
@@ -479,7 +491,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     #footer {
-      margin: 2em 3em 0;
+      margin: .75em 3em 0;
     }
 
     .overlay {
