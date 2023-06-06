@@ -390,7 +390,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .results p {
-    padding: 0 1em;
+    padding: 0 1.5em;
     line-height: 130%;
   }
 
@@ -409,10 +409,15 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   label {
+    display: block;
+    text-align: left;
+    margin: auto;
     width: 200px;
   }
 
   input {
+    display: block;
+    margin: auto;
     width: 200px;
     padding: .25em;
   }
@@ -522,5 +527,17 @@ h1,h2,h3,h4,h5,h6 {
     .artist {
       font-size: 0.75em;
       margin-top: 0.5em;
+    }
+
+    label {
+      display: inline;
+      text-align: center;
+      width: 200px;
+    }
+  
+    input {
+      display: inline;
+      width: 200px;
+      padding: .25em;
     }
   }
