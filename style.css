@@ -365,7 +365,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .disclaimer {
-    flex: 1 0 80%;
+    flex: 1 0 100%;
     margin-top: 0.5em;
     margin-bottom: 3em;
     width: 100%;
@@ -415,13 +415,10 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .tour {
-    margin: 1em auto 2em;
-    background-color: #0E4174;
-    border-radius: 20px;
-    height: 50vw;
-    width: 70vw;
-    max-height: 300px;
-    max-width: 400px;
+    margin: 1em 1em 2em;
+    position:relative; 
+    height:0; 
+    padding-top:56.25%
   }
 
   .results .disclaimer {
