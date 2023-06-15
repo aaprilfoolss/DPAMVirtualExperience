@@ -1,3 +1,6 @@
+// Code written by April LaRosa (https://github.com/aaprilfoolss)
+// Part of this code was taken from https://codepen.io/RobVermeer/pen/japZpY (credit to https://codepen.io/RobVermeer) and edited to better suit the project's needs
+
 'use strict';
 
 var quizContainer = document.querySelector('.quiz');
